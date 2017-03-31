@@ -1,5 +1,5 @@
 body.landing {
-	background-color: rgb(0, 45, 90);
+	background-color: rgb(25, 45, 90);
 }
 
 .hero-content {
@@ -42,6 +42,6 @@ body.landing {
  .ion-headphone,
  .ion-android-download,
  .ion-iphone {
-     color: rgb(68, 153, 122);
+     color: rgba(68, 153, 122, 0.7);
      font-size: 5rem;
  }

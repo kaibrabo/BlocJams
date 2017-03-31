@@ -16,18 +16,56 @@ body {
 }
 
 .navbar {
+	position: relative;
 	padding: 0.5rem;
-	background-color: rgb(68, 153, 122);
+	background-color: rgba(68, 153, 122, 0.5);
+	z-index: 1;
 }
 
 .navbar .logo {
 	position: relative;
 	left: 2rem;
+	cursor: pointer;
 }
 
 .container {
 	margin: 0 auto;
 	max-width: 64rem;
+}
+
+.navbar .links-container {
+    display: table;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100px;
+    color: white;
+    text-decoration: none;
+}
+ 
+.links-container .navbar-link {
+    display: table-cell;
+    position: relative;
+    height: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    vertical-align: middle;
+    color: white;
+    font-size: 0.625rem;
+    letter-spacing: 0.05rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.links-container .navbar-link:hover {
+	color: rgb(25, 45, 90);
+}
+
+.links-container .navbar-link:active {
+	color: rgb(25, 45, 90);
+	background-color: white;
 }
 
 /* Medium and small screens (640px) */
