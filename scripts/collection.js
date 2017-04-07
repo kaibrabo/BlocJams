@@ -16,7 +16,7 @@ var collectionItemTemplate =
 
 window.onload = function() {
 	
-	var collectionContainer = document.getElementByClassName('album-covers')[0];
+	var collectionContainer = document.getElementsByClassName('album-covers')[0];
 	//we select the first (and only, as we've designed it) element with an album-covers class name
 	
 	collectionContainer.innerHTML = '';
