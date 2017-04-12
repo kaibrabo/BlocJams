@@ -3,6 +3,7 @@ body.album {
 	background: url(../assets/images/blurred_backgrounds/blur_bg_3.jpg) no-repeat center center;
 	background-attachment: fixed;
 	background-size: cover;
+	padding-bottom: 200px;
 }
 
 .album-cover-art {
