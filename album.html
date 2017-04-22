@@ -1,9 +1,9 @@
 <!DOCTYPE html>
  <html>
      <head>
-		 
+
          <title>Bloc Jams</title>
-		 
+
          <meta name="viewport" content="width=device-width, initial-scale=1">
          <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,800,600,700,300">
          <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
@@ -12,9 +12,9 @@
          <link rel="stylesheet" type="text/css" href="styles/album.css">
          <link rel="stylesheet" type="text/css" href="styles/player_bar.css">
      </head>
-	 
+
      <body class="album">
-		 
+
          <nav class="navbar"> <!-- nav bar -->
              <a href="index.html"  class="logo">
                  <img src="assets/images/bloc_jams_logo.png" alt="bloc jams logo">
@@ -23,7 +23,7 @@
                  <a href="collection.html" class="navbar-link">collection</a>
              </div>
          </nav>
-		 
+
 		 <main class="album-view container narrow"><!-- Album -->
              <section class="clearfix">
                  <div class="column half">
@@ -35,38 +35,40 @@
                      <h5 class="album-view-release-info">1909 Spanish Records</h5>
                  </div>
              </section>
-			 
+
 			 <table class="album-view-song-list">
-			 
+
 			 </table>
          </main>
-		 
+
 		 <section class="player-bar">
-			 
+
 		 	<div class="container">
-				
+
 				<div class="control-group main-controls">
-					
+
 					<a class="previous">
 						<span class="ion-ios-arrow-back"></span>
 					</a>
-				
+
 					<a class="play-pause">
 						<span class="ion-ios-play"></span>
 					</a>
-					
+
 					<a class="next">
 						<span class="ion-ios-arrow-forward"></span>
 					</a>
-					
+
 				</div>
-				
+
 				<div class="control-group currently-playing">
-					
-					<h2 class="song-name">If It Don't Make Money</h2>
-					
-					<h3 class="artist-name">Dom Kennedy</h3>
-					
+
+					<h2 class="song-name"></h2>
+
+					<h3 class="artist-name"></h3>
+
+                    <h2 class="artist-song-mobile"></h2>
+
 					<div class="seek-control">
 
 						<div class="seek-bar">
@@ -82,36 +84,34 @@
 						<div class="total-time">4:45</div>
 
 					</div>
-					
-					<h2 class="artist-song-mobile">If It Don't Make Money - Dom Kennedy</h2>
-				
+
 				</div>
-			 
+
 				<div class="control-group volume">
-					
+
 					<span class="ion-ios-volume-high icon"></span>
-					
+
 					<div class="seek-bar">
-						
+
 						<div class="fill"></div>
-						
+
 						<div class="thumb"></div>
-						
+
 					</div>
-				
+
 				</div>
-			 
+
 			</div>
-		 
+
 		 </section>
-		 
+
 		 <script
 		  src="https://code.jquery.com/jquery-3.2.1.js"
 		  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
 		  crossorigin="anonymous"></script>
 
 
-		 
+		 <script src="scripts/fixtures.js"></script>
 		 <script src="scripts/album.js"></script>
      </body>
  </html>
