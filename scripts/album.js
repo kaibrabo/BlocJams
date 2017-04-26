@@ -58,11 +58,12 @@ var getSongNumberCell = function (number) {
 };
 
 var createSongRow = function(songNumber, songName, songLength) {
+
     var template =
         '<tr class="album-view-song-item">'
       + '	<td class="song-item-number" data-song-number="' + songNumber + '">' + songNumber + '</td>'
       + '  	<td class="song-item-title">' + songName + '</td>'
-      + '  	<td class="song-item-duration">' + songLength + '</td>'
+      + '  	<td class="song-item-duration">' + convertTimeToString(songLength) + '</td>'
       + '</tr>'
       ;
 
@@ -177,9 +178,11 @@ var setCurrentAlbum = function(album) {
 
 	for (var i = 0; i < album.songs.length; i++) {
 
-	var $newRow = createSongRow(i + 1, album.songs[i].title, album.songs[i].duration);
 
-	$albumSongList.append($newRow);
+
+    	var $newRow = createSongRow(i + 1, album.songs[i].title, album.songs[i].duration);
+
+    	$albumSongList.append($newRow);
 	}
 };
 
@@ -401,40 +404,27 @@ var togglePlayFromPlayerBar = function () {
     updatePlayerBarSong();
 };
 
-var setCurrentTimeInPlayerBar = function () {
+var convertTimeToString = function (time) {
 
-    var runningTime = function () {
+    var minutes = Math.floor(time / 60);
 
-            var time = currentSoundFile.getTime();
+    var seconds = Math.floor(time - minutes * 60);
 
-            var minutes = Math.floor(time / 60);
+    if (minutes == 0 && seconds < 10) {
 
-            var seconds = Math.floor(time - minutes * 60);
+        return '0:0' + seconds;
 
-            if (minutes < 1 && seconds < 10) {
-
-                return '0:0' + seconds;
-
-            } else {
-
-                return minutes + ":" + seconds;
-            }
-        };
-
-        $('.current-time').html(runningTime);
-
-    var songTime = function () {
-
-        var time = currentSoundFile.getDuration();
-
-        var minutes = Math.floor(time / 60);
-
-        var seconds = Math.floor(time - minutes * 60);
+    } else {
 
         return minutes + ":" + seconds;
-    };
+    }
+};
 
-    $('.total-time').html(songTime);
+var setCurrentTimeInPlayerBar = function () {
+
+    $('.current-time').html(convertTimeToString(currentSoundFile.getTime() ));
+
+    $('.total-time').html(convertTimeToString(currentSoundFile.getDuration() ));
 
 };
 
